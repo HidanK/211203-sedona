@@ -10,44 +10,39 @@
                 <ul class="main-navigation main-navigation-left">
                     <li><a href="#">Информация</a></li>
                     <li><a href="#">Фото и видео</a></li>
-                </ul>
-                <ul class="main-navigation main-navigation-right">
                     <li><a href="#">Карта штата</a></li>
                     <li><a href="hotels.html">Гостиницы</a></li>
                 </ul>
-                <a><img class="main-label" src="http://placehold.it/137x70" alt="city of cedona" width="137" height="70"></a>
+                <a class="main-logo">
+                    <img class="main-label" src="http://placehold.it/137x70" alt="city of cedona" width="137" height="70">
+                </a>
             </nav>
         </header>
 
     <main class="container">
         <section class="promo">
-            <img class="prom-label-top" src="http://placehold.it/256x86" alt="city of cedona" width="256" height="86">
-            <img class="prom-label-center" src="http://placehold.it/458x78" alt="city of cedona" width="458" height="78">
-            <img class="prom-label-bottom" src="http://placehold.it/296x80" alt="city of cedona" width="296" height="80">
+            <span class="promo-logo">Welcome To the gourgeous; Sedona; Because the Grand Canyoun Sucks</span>
         </section>
-        <h2 class="container">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="container">Седона — небольшой городок в Аризоне, заслуживающий большего</h2>
         <section class="features">
-            <h3>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</h3>
+            <h3>Рассмотрим 5 причин, по которым седона круче, чем Гранд-Каньон</h3>
             <figure class="feature-1">
                 <h3>Настоящий городок</h3>
                 <span>№1</span>
-                <figcaption>Седона — не аттракцион для туристов, там течет своя жизнь</figcaption>
                 <img src="http://placehold.it/512x256" alt="Город - Седона" width="512" height="256">
+                <figcaption>Седона — не аттракцион для туристов, там течет своя жизнь</figcaption>
             </figure>
 
-            <ul class="Attractions">
+            <ul class="attractions">
                 <li>
-                    <img src="http://placehold.it/74x70" alt="Жилье" width="74" height="70">
                     <h3>Жилье</h3>
                     <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
                 <li>
-                    <img src="http://placehold.it/75x72" alt="Еда" width="75" height="72">
                     <h3>Еда</h3>
                     <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
                 <li>
-                    <img src="http://placehold.it/64x76" alt="Сувениры" width="64" height="76">
                     <h3>Сувениры</h3>
                     <p>Не только китайского, но и местного производства!</p>
                 </li>
@@ -81,14 +76,22 @@
 
         <section class="index-form">
             <h2>Заинтересовались?</h2>
-            <span>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</span>
+            <span>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</span>
             <section class="card">
                 <h2>Поиск гостиницы в Седоне</h2>
-                <form action="#" method="get">
-                    <label>Дата заезда:<input type="date" name="arrival-date" value="дата заезда"></label>
-                    <label>Дата выезда:<input type="date" name="date-departure" value="дата выезда"></label>
-                    <label>Взрослые:<input type="number" name="adult" value="взрослые" min="1"></label>
-                    <label>Дети:<input type="number" name="child" value="дети" min="0"></label>
+                <form action="?" method="get" name="index-form">
+                    <label>Дата заезда:
+                        <input type="date" name="arrival-date"><i class="icon-calendar"></i>
+                    </label>
+                    <label>Дата выезда:
+                        <input type="date" name="date-departure"><i class="icon-calendar"></i>
+                    </label>
+                    <label>Взрослые:
+                        <i class="icon-plus"></i><input type="number" name="adult" min="1"><i class="icon-minus"></i>
+                    </label>
+                    <label>Дети:
+                        <i class="icon-plus"></i><input type="number" name="child" min="0"><i class="icon-minus"></i>
+                    </label>
                     <button type="submit" class="btn">Найти</button>
                 </form>
             </section>
@@ -96,17 +99,19 @@
     </main>
 
     <footer class="main-foter container">
-        <address class="footer-hashtag">
+        <div class="footer-hashtag">
             <a href="#">#visitsedona</a>
-        </address>
-        <address class="footer-social">
+        </div>
+        <div class="footer-social">
             <a class="social-btn social-btn-tw" href="#">Twitter</a>
             <a class="social-btn social-btn-fb" href="#">Fecebook</a>
             <a class="social-btn social-btn-inst" href="#">Youtube</a>
-        </address>
-        <address class="footer-copyright">
-            <p>Website by<a href="#"><img src="http://placehold.it/113x39" alt="htmlacademy" width="113" height="39"></a></p>
-        </address>
+        </div>
+        <div class="footer-copyright">
+            <p>Website by
+                <a href="https://htmlacademy.ru"><img src="http://placehold.it/113x39" alt="htmlacademy" width="113" height="39"></a>
+            </p>
+        </div>
     </footer>
     </body>
 </html>

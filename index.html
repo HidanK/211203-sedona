@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <title>Седона</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header class="main-header container">
-            <nav class="main-navigation">
-                <ul class="main-navigation main-navigation-left">
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="#">Карта штата</a></li>
-                    <li><a href="hotels.html">Гостиницы</a></li>
-                </ul>
-                <a class="main-logo">
-                    <img class="main-label" src="img/logo.png" alt="city of sedona" width="137" height="70">
-                </a>
-            </nav>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <title>Седона</title>
+    <link rel="stylesheet" type="text/css" href="css/normolize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header container">
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Фото и видео</a></li>
+                <li><a href="#">Карта штата</a></li>
+                <li><a href="hotels.html">Гостиницы</a></li>
+            </ul>
+            <a class="main-logo">
+                <img class="main-label" src="img/logo.png" alt="city of sedona" width="137" height="70">
+            </a>
+        </nav>
+    </header>
 
     <main class="container">
-        <section class="promo">
+        <section class="promo text-alignment">
             <span class="promo-logo">Welcome To the gourgeous Sedona. Because the Grand Canyoun Sucks</span>
         </section>
-        <h2 class="container">Седона — небольшой городок в Аризоне, заслуживающий большего</h2>
+        <h2 class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего</h2>
         <section class="features">
-            <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон</span>
-            <figure class="feature-1">
-                <h3>Настоящий городок</h3>
-                <span>№1</span>
-                <img src="img/feature-1.jpg" alt="Город - Седона" width="800" height="256">
-                <figcaption>Седона — не аттракцион для туристов, там течет своя жизнь</figcaption>
+            <div class="slogan-features">
+                <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон</span>
+            </div>
+            <figure class="feature clearfix">
+                <img class="block-right" src="img/feature-1.jpg" alt="Город - Седона" width="800" height="256">
+                <div class="info-feature block-left">
+                    <h3>Настоящий городок</h3>
+                    <span>№1</span>
+                    <figcaption>Седона — не аттракцион для туристов, там течет своя жизнь</figcaption>
+                </div>
             </figure>
 
-            <ul class="attractions">
+            <ul class="attractions column-grid">
                 <li>
                     <h3>Жилье</h3>
                     <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -49,14 +54,16 @@
                 </li>
             </ul>
 
-            <figure class="feature-2">
-                <img src="img/feature-2.jpg" alt="Город - Седона" width="800" height="256">
-                <h3>Там есть мост дьявола</h3>
-                <span>№2</span>
-                <figcaption>Да, по нему можно пройти! Если конечно вы осмелитесь</figcaption>
+            <figure class="feature clearfix">
+                <img class="box-left" src="img/feature-2.jpg" alt="Город - Седона" width="800" height="256">
+                <div class="info-feature block-right">
+                    <h3>Там есть мост дьявола</h3>
+                    <span>№2</span>
+                    <figcaption>Да, по нему можно пройти! Если конечно вы осмелитесь</figcaption>
+                </div>
             </figure>
 
-            <ul class="features-3-5">
+            <ul class="features-3-5 column-grid">
                 <li>
                     <h3>Небольшая площадь</h3>
                     <span>№3</span>
@@ -75,12 +82,12 @@
             </ul>
         </section>
 
-        <section class="index-form">
+        <section class="index-form container text-alignment">
             <h2>Заинтересовались?</h2>
             <span>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</span>
             <section class="card">
                 <h2>Поиск гостиницы в Седоне</h2>
-                <form action="?" method="get" name="index-form">
+                <form class="card-form" action="?" method="get" name="index-form">
                     <label>Дата заезда:
                         <input type="date" name="arrival-date">
                         <i class="icon-calendar" tabindex="0"></i>
@@ -89,36 +96,38 @@
                         <input type="date" name="date-departure">
                         <i class="icon-calendar" tabindex="0"></i>
                     </label>
-                    <label>Взрослые:
-                        <i class="icon-plus" tabindex="0"></i>
-                        <input type="number" name="adult" min="1">
-                        <i class="icon-minus" tabindex="0"></i>
-                    </label>
-                    <label>Дети:
-                        <i class="icon-plus" tabindex="0"></i>
-                        <input type="number" name="child" min="0">
-                        <i class="icon-minus" tabindex="0"></i>
-                    </label>
+                    <div class="form-people">
+                        <label>Взрослые:
+                            <i class="icon-plus" tabindex="0"></i>
+                            <input type="number" name="adult" min="1">
+                            <i class="icon-minus" tabindex="0"></i>
+                        </label>
+                        <label>Дети:
+                            <i class="icon-plus" tabindex="0"></i>
+                            <input type="number" name="child" min="0">
+                            <i class="icon-minus" tabindex="0"></i>
+                        </label>
+                    </div>
                     <button type="submit" class="btn">Найти</button>
                 </form>
             </section>
         </section>
     </main>
 
-    <footer class="main-foter container">
-        <div class="footer-hashtag">
+    <footer class="main-footer container clearfix">
+        <div class="footer-hashtag block-left">
             <a href="#">#visitsedona</a>
         </div>
-        <div class="footer-social">
+        <div class="footer-social block-left">
             <a class="social-btn social-btn-tw" href="#">Twitter</a>
             <a class="social-btn social-btn-fb" href="#">Fecebook</a>
             <a class="social-btn social-btn-inst" href="#">Youtube</a>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright block-right">
             <p>Website by
                 <a href="https://htmlacademy.ru"><img src="img/copyright.png" alt="htmlacademy" width="113" height="39"></a>
             </p>
         </div>
     </footer>
-    </body>
+</body>
 </html>

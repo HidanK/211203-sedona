@@ -3,26 +3,26 @@
 <head>
     <meta charset="utf-8">
     <title>Поиск отелей — Седона</title>
-    <link rel="stylesheet" type="text/css" href="css/normolize.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="main-header container">
         <nav class="main-navigation">
-            <ul class="main-navigation">
+            <ul>
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
+                <li><a href="hotels.html">Гостиницы</a></li>
                 <li><a href="#">Карта штата</a></li>
-                <li><a class="active">Гостиницы</a></li>
             </ul>
             <a href="index.html" class="main-logo">
-                <img class="main-label" src="img/logo.png" alt="city of sedona" width="137" height="70">
+                <img src="img/logo.png" alt="city of sedona" width="137" height="70">
             </a>
         </nav>
     </header>
 
-    <main class="container container-hotels">
-        <form class="hotels-form clearfix" action="search-results.php" method="get" name="hotels-form">
+    <main class="container">
+        <form class="hotels-form container-hotels clearfix" action="search-results.php" method="get" name="hotels-form">
             <fieldset class="form-infrastructure block-left">
                 <legend>Инфраструктура:</legend>
                 <input type="checkbox" name="pool" id="pool" checked>
@@ -45,22 +45,30 @@
             </fieldset>
             <button type="submit" class="btn block-right">Показать</button>
         </form>
-        <div class="clearfix">
+
+        <div class="result-sorting container-hotels clearfix">
             <span class="result-forms block-left">Найдено: <output id="hotels-form-results">3</output></span>
+
             <ul class="sorting block-right">
-                <li><button class="button-sorting">По цене</button></li>
-                <li><button class="button-sorting">По типу</button></li>
-                <li><button class="button-sorting">По рейтингу</button></li>
-                <li><button class="button-sorting ascending" title="По возрастанию">▲</button></li>
-                <li><button class="button-sorting descending active" title="По убыванию">▼</button></li>
+                <li><span>Сортировка:</span></li>
+                <li>
+                    <button class="button-sorting">По цене</button>
+                    <button class="button-sorting">По типу</button>
+                    <button class="button-sorting">По рейтингу</button>
+                </li>
+                <li>
+                    <button class="button-sorting ascending" title="По возрастанию">▲</button>
+                    <button class="button-sorting descending active" title="По убыванию">▼</button>
+                </li>
             </ul>
         </div>
+
         <table class="search-results">
             <tr>
                 <td class="td-image">
                     <img src="img/hotels-1.jpg" alt="Amara Resort and Spa" width="135" height="90">
                 </td>
-                <td class="clearfix">
+                <td class="td-info clearfix">
                     <div class="info-hotel block-left">
                         <h3>Amara Resort &amp; Spa</h3>
                         <div class="price-hotel">
@@ -87,7 +95,7 @@
                 <td class="td-image">
                     <img src="img/hotels-2.jpg" alt="Desert Quail Inn" width="135" height="90">
                 </td>
-                <td class="clearfix">
+                <td class="td-info clearfix">
                     <div class="info-hotel block-left">
                         <h3>Desert Quail Inn</h3>
                         <div class="price-hotel">

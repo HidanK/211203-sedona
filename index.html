@@ -3,26 +3,26 @@
 <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <link rel="stylesheet" type="text/css" href="css/normolize.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="main-header container">
         <nav class="main-navigation">
-            <ul>
+            <ul class="clearfix">
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
-                <li><a href="#">Карта штата</a></li>
                 <li><a href="hotels.html">Гостиницы</a></li>
+                <li><a href="#">Карта штата</a></li>
             </ul>
             <a class="main-logo">
-                <img class="main-label" src="img/logo.png" alt="city of sedona" width="137" height="70">
+                <img src="img/logo.png" alt="city of sedona" width="137" height="70">
             </a>
         </nav>
     </header>
 
     <main class="container">
-        <section class="promo text-alignment">
+        <section class="promo text-center">
             <span class="promo-logo">Welcome To the gourgeous Sedona. Because the Grand Canyoun Sucks</span>
         </section>
         <h2 class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего</h2>
@@ -32,11 +32,11 @@
             </div>
             <figure class="feature clearfix">
                 <img class="block-right" src="img/feature-1.jpg" alt="Город - Седона" width="800" height="256">
-                <div class="info-feature block-left">
+                <figcaption class="info-feature block-left">
                     <h3>Настоящий городок</h3>
                     <span>№1</span>
-                    <figcaption>Седона — не аттракцион для туристов, там течет своя жизнь</figcaption>
-                </div>
+                    <span>Седона — не аттракцион для туристов, там течет своя жизнь</span>
+                </figcaption>
             </figure>
 
             <ul class="attractions column-grid">
@@ -56,11 +56,11 @@
 
             <figure class="feature clearfix">
                 <img class="box-left" src="img/feature-2.jpg" alt="Город - Седона" width="800" height="256">
-                <div class="info-feature block-right">
+                <figcaption class="info-feature block-right">
                     <h3>Там есть мост дьявола</h3>
                     <span>№2</span>
-                    <figcaption>Да, по нему можно пройти! Если конечно вы осмелитесь</figcaption>
-                </div>
+                    <span>Да, по нему можно пройти! Если конечно вы осмелитесь</span>
+                </figcaption>
             </figure>
 
             <ul class="features-3-5 column-grid">
@@ -82,11 +82,13 @@
             </ul>
         </section>
 
-        <section class="index-form container text-alignment">
-            <h2>Заинтересовались?</h2>
-            <span>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</span>
+        <section class="index-form container text-center">
+            <h2 class="slogan-form">Заинтересовались?</h2>
+            <span>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</span>
             <section class="card">
-                <h2>Поиск гостиницы в Седоне</h2>
+                <section class="text-center">
+                    <h2>Поиск гостиницы в Седоне</h2>
+                </section>
                 <form class="card-form" action="?" method="get" name="index-form">
                     <label>Дата заезда:
                         <input type="date" name="arrival-date">

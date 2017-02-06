@@ -31,10 +31,10 @@
                 <span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон</span>
             </div>
             <figure class="feature clearfix">
-                <img class="block-right" src="img/feature-1.jpg" alt="Город - Седона" width="800" height="256">
+                <img class="block-right" src="img/feature-1.jpg" alt="Город - Седона" width="512" height="256">
                 <figcaption class="info-feature block-left">
                     <h3>Настоящий городок</h3>
-                    <span>№1</span>
+                    <span class="number-feature">№1</span>
                     <span>Седона — не аттракцион для туристов, там течет своя жизнь</span>
                 </figcaption>
             </figure>
@@ -55,28 +55,28 @@
             </ul>
 
             <figure class="feature clearfix">
-                <img class="box-left" src="img/feature-2.jpg" alt="Город - Седона" width="800" height="256">
+                <img class="block-left" src="img/feature-2.jpg" alt="Город - Седона" width="512" height="256">
                 <figcaption class="info-feature block-right">
                     <h3>Там есть мост дьявола</h3>
-                    <span>№2</span>
-                    <span>Да, по нему можно пройти! Если конечно вы осмелитесь</span>
+                    <span class="number-feature">№2</span>
+                    <span>Да, по нему можно пройти! Если, конечно, вы осмелитесь</span>
                 </figcaption>
             </figure>
 
             <ul class="features-3-5 column-grid">
                 <li>
                     <h3>Небольшая площадь</h3>
-                    <span>№3</span>
+                    <span class="number-feature">№3</span>
                     <p>Все достопримеча- тельности находятся очень близко</p>
                 </li>
                 <li>
                     <h3>Красивая дорога</h3>
-                    <span>№4</span>
+                    <span class="number-feature">№4</span>
                     <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                 </li>
                 <li>
                     <h3>Мало туристов</h3>
-                    <span>№5</span>
+                    <span class="number-feature">№5</span>
                     <p>Большинство едет в гранд каньон и толпится там</p>
                 </li>
             </ul>
@@ -84,31 +84,29 @@
 
         <section class="index-form container text-center">
             <h2 class="slogan-form">Заинтересовались?</h2>
-            <span>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</span>
+            <span>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</span>
             <section class="card">
-                <section class="text-center">
-                    <h2>Поиск гостиницы в Седоне</h2>
-                </section>
+                <a href="#">Поиск гостиницы в Седоне</a>
                 <form class="card-form" action="?" method="get" name="index-form">
-                    <label>Дата заезда:
-                        <input type="date" name="arrival-date">
-                        <i class="icon-calendar" tabindex="0"></i>
-                    </label>
-                    <label>Дата выезда:
-                        <input type="date" name="date-departure">
-                        <i class="icon-calendar" tabindex="0"></i>
-                    </label>
-                    <div class="form-people">
-                        <label>Взрослые:
-                            <i class="icon-plus" tabindex="0"></i>
-                            <input type="number" name="adult" min="1">
-                            <i class="icon-minus" tabindex="0"></i>
-                        </label>
-                        <label>Дети:
-                            <i class="icon-plus" tabindex="0"></i>
-                            <input type="number" name="child" min="0">
-                            <i class="icon-minus" tabindex="0"></i>
-                        </label>
+                    <label>Дата заезда:</label>
+                    <input type="date" name="arrival-date">
+                    <i class="icon-calendar" tabindex="0"></i>
+                    <label>Дата выезда:</label>
+                    <input type="date" name="date-departure">
+                    <i class="icon-calendar" tabindex="0"></i>
+                    <div class="form-people clearfix">
+                        <div class="block-left">
+                            <label class="adults-form" for="adult">Взрослые:</label>
+                            <i class="icon-plus" tabindex="0">-</i>
+                            <input type="number" id="adult" name="adult" min="1">
+                            <i class="icon-minus" tabindex="0">+</i>
+                        </div>
+                        <div class="block-right">
+                            <label class="children-form" for="child">Дети:</label>
+                            <i class="icon-plus" tabindex="0">-</i>
+                            <input type="number" id="child" name="child" min="0">
+                            <i class="icon-minus" tabindex="0">+</i>
+                        </div>
                     </div>
                     <button type="submit" class="btn">Найти</button>
                 </form>

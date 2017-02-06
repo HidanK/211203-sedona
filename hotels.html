@@ -23,27 +23,44 @@
 
     <main class="container">
         <form class="hotels-form container-hotels clearfix" action="search-results.php" method="get" name="hotels-form">
-            <fieldset class="form-infrastructure block-left">
+            <fieldset class="form-hotels-checkbox form-infrastructure block-left">
                 <legend>Инфраструктура:</legend>
-                <input type="checkbox" name="pool" id="pool" checked>
-                <label for="pool">Бассейн</label>
-                <input type="checkbox" name="parking" id="parking">
-                <label for="parking">Парковка</label>
-                <input type="checkbox" name="wi-fi" id="wi-fi">
-                <label for="wi-fi">wi-fi</label>
+                <div>
+                    <input type="checkbox" name="pool" id="pool" checked>
+                    <label for="pool">Бассейн</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="parking" id="parking">
+                    <label for="parking">Парковка</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="wi-fi" id="wi-fi">
+                    <label for="wi-fi">wi-fi</label>
+                </div>
             </fieldset>
-            <fieldset class="form-type-house block-left">
+            <fieldset class="form-hotels-checkbox form-type-house block-left">
                 <legend>Тип жилья:</legend>
-                <label><input type="checkbox" name="hotel" checked>Гостиница</label>
-                <label><input type="checkbox" name="motel" checked>Мотель</label>
-                <label><input type="checkbox" name="apartments" checked>Апартаменты</label>
+                <div>
+                    <input type="checkbox" name="hotel" checked>
+                    <label>Гостиница</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="motel" checked>
+                    <label>Мотель</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="apartments" checked>
+                    <label>Апартаменты</label>
+                </div>
             </fieldset>
-            <fieldset class="form-range block-right">
-                <legend>Стоимость в сутки (Р):</legend>
-                <output id="hotels-form-output"></output>
-                <input type="range" min="0" max="3000" step="500">
-            </fieldset>
-            <button type="submit" class="btn block-right">Показать</button>
+            <div class="block-right">
+                <fieldset class="form-range">
+                    <legend>Стоимость в сутки (Р):</legend>
+                    <output id="hotels-form-output"></output>
+                    <input type="range" min="0" max="3000" step="500">
+                </fieldset>
+                <button type="submit" class="btn block-right">Показать</button>
+            </div>
         </form>
 
         <div class="result-sorting container-hotels clearfix">
@@ -57,8 +74,8 @@
                     <button class="button-sorting">По рейтингу</button>
                 </li>
                 <li>
-                    <button class="button-sorting ascending" title="По возрастанию">▲</button>
-                    <button class="button-sorting descending active" title="По убыванию">▼</button>
+                    <button class="button-sorting sort-ascending" title="По возрастанию">▲</button>
+                    <button class="button-sorting sort-descending active" title="По убыванию">▼</button>
                 </li>
             </ul>
         </div>
@@ -76,8 +93,8 @@
                             <span class="price">от 4000 Р.</span>
                         </div>
                         <div class="buttons">
-                            <a href="#" class="info btn">Подробнее</a>
-                            <a href="#" class="order btn">Забронировать</a>
+                            <a href="#" class="info-btn btn">Подробнее</a>
+                            <a href="#" class="order-btn btn">Забронировать</a>
                         </div>
                     </div>
                     <div class="mark-hotel block-right">
@@ -87,7 +104,7 @@
                             <i class="star">★</i>
                             <i class="star">★</i>
                         </div>
-                        <span class="raiting">Рейтинг: 8,5</span>
+                        <mark class="raiting">Рейтинг: 8,5</mark>
                     </div>
                 </td>
             </tr>
@@ -103,8 +120,8 @@
                             <span class="price">от 3000 Р.</span>
                         </div>
                         <div class="buttons">
-                            <a href="#" class="info btn">Подробнее</a>
-                            <a href="#" class="order btn">Забронировать</a>
+                            <a href="#" class="info-btn btn">Подробнее</a>
+                            <a href="#" class="order-btn btn">Забронировать</a>
                         </div>
                     </div>
                     <div class="mark-hotel block-right">
@@ -113,7 +130,7 @@
                             <i class="star">★</i>
                             <i class="star">★</i>
                         </div>
-                        <span class="raiting">Рейтинг: 8,9</span>
+                        <mark class="raiting">Рейтинг: 8,9</mark>
                     </div>
                 </td>
             </tr>
@@ -121,7 +138,7 @@
                 <td class="td-image">
                     <img src="img/hotels-3.jpg" alt="Villas at Poco Diablo" width="135" height="90">
                 </td>
-                <td class="clearfix">
+                <td class="td-info clearfix">
                     <div class="info-hotel block-left">
                         <div class="price-hotel">
                             <h3>Villas at Poco Diablo</h3>
@@ -129,8 +146,8 @@
                             <span class="price">от 2000 Р.</span>
                         </div>
                         <div class="buttons">
-                            <a href="#" class="info btn">Подробнее</a>
-                            <a href="#" class="order btn">Забронировать</a>
+                            <a href="#" class="info-btn btn">Подробнее</a>
+                            <a href="#" class="order-btn btn">Забронировать</a>
                         </div>
                     </div>
                     <div class="mark-hotel block-right">
@@ -138,7 +155,7 @@
                             <i class="star">★</i>
                             <i class="star">★</i>
                         </div>
-                        <span class="raiting">Рейтинг: 9,2</span>
+                        <mark class="raiting">Рейтинг: 9,2</mark>
                     </div>
                 </td>
             </tr>

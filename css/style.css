@@ -13,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #f2f2f2;
 }
 
 h2 {
@@ -33,6 +34,7 @@ img {
 
 main {
     flex-grow: 1;
+    background-color: #fff;
 }
 
 .block-left {
@@ -63,42 +65,45 @@ main {
     text-align: center;
 }
 
+/*header*/
+
+.main-header{
+        background-color: #fff;
+}
+
 .main-navigation {
     position: relative;
 }
 
 .main-navigation ul {
-    font-size: 0;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .main-navigation li {
-    display: inline-block;
-    vertical-align: middle;
+    float: left;
     width: 20%;
     font-size: 14px;
 }
 
-.main-navigation li:nth-last-child(-n+2) {
+.main-navigation li:nth-child(n+3) {
     float: right;
     text-align: right;
 }
 
 .main-navigation a {
-    display: block;
     text-align: center;
     text-decoration: none;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    line-height: 56px;
+    font-weight: bold;
 }
 
 .main-logo {
-    position: absolute;;
+    position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -19px);
+    transform: translate(-50%, 0);
   }
 
 /*index*/
@@ -135,11 +140,11 @@ main {
 .feature .info-feature {
     width: 256px;
     text-align: center;;
-    padding: 45px 30px 40px;
+    padding: 43px 30px 38px;
     color: #fff;
 }
 
-.info-feature h3{
+.info-feature h3 {
     margin: 0;
     color: #fff;
 }
@@ -185,7 +190,7 @@ main {
     padding-bottom: 40px;
 }
 
-.features-3-5 h3{
+.features-3-5 h3 {
     margin: 0;
 }
 
@@ -208,7 +213,7 @@ main {
     vertical-align: middle;
 }
 
-.card{
+.card {
     margin-top: 50px;
 }
 
@@ -217,11 +222,14 @@ main {
     display: block;
     text-align: center;
     text-decoration: none;
-    padding-top: 20px;
-    padding-bottom: 20px;
     background-color: #766357;
-    min-height: 86px;
-    vertical-align: middle;
+    min-height: 85px;
+    line-height: 85px;
+    font-size: 21px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card-form {
@@ -241,17 +249,22 @@ main {
     font-size: 14px;
 }
 
- .card-form > label,
- .card-form > input {
+.form-date {
     margin-bottom: 30px;
+    position: relative;
 }
 
-.card-form input{
+.form-date input{
+    width: 345px;
+}
+
+.form-date label{
+    padding-top: 10px;
+    width: calc(100%-345px;)
+}
+
+.card-form input {
     height: 40px;
-}
-
-.card-form input[type="date"] {
-    width: 350px;
 }
 
 .card-form input[type="number"] {
@@ -294,11 +307,11 @@ main {
     display: inline-block;
 }
 
-.form-hotels-checkbox div{
+.form-hotels-checkbox div {
     margin-bottom: 25px;
 }
 
-.form-hotels-checkbox legend{
+.form-hotels-checkbox legend {
     margin-bottom: 30px;
 }
 
@@ -309,7 +322,7 @@ main {
     width: 140px;
 }
 
-.result-sorting{
+.result-sorting {
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -404,14 +417,17 @@ main {
     color: #81b3d2;
 }
 
-.raiting {
+.rating {
     display: block;
 }
+
+/*footer*/
 
 .main-footer {
     min-height: 120px;
     padding-left: 60px;
     padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-hashtag {

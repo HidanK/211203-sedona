@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="main-header container">
+    <header class="main-header container container-padded">
         <nav class="main-navigation">
-            <ul>
+            <ul class="clearfix">
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
-                <li><a href="hotels.html">Гостиницы</a></li>
+                <li><a>Гостиницы</a></li>
                 <li><a href="#">Карта штата</a></li>
             </ul>
             <a href="index.html" class="main-logo">
@@ -41,16 +41,16 @@
             <fieldset class="form-hotels-checkbox form-type-house block-left">
                 <legend>Тип жилья:</legend>
                 <div>
-                    <input type="checkbox" name="hotel" checked>
-                    <label>Гостиница</label>
+                    <input type="checkbox" name="hotel" id="hotel" checked>
+                    <label for="hotel">Гостиница</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="motel" checked>
-                    <label>Мотель</label>
+                    <input type="checkbox" name="motel" id="motel" checked>
+                    <label for="motel">Мотель</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="apartments" checked>
-                    <label>Апартаменты</label>
+                    <input type="checkbox" name="apartments" id="apartments" checked>
+                    <label for="apartments">Апартаменты</label>
                 </div>
             </fieldset>
             <div class="block-right">
@@ -104,7 +104,7 @@
                             <i class="star">★</i>
                             <i class="star">★</i>
                         </div>
-                        <mark class="raiting">Рейтинг: 8,5</mark>
+                        <mark class="rating">Рейтинг: 8,5</mark>
                     </div>
                 </td>
             </tr>
@@ -130,7 +130,7 @@
                             <i class="star">★</i>
                             <i class="star">★</i>
                         </div>
-                        <mark class="raiting">Рейтинг: 8,9</mark>
+                        <mark class="rating">Рейтинг: 8,9</mark>
                     </div>
                 </td>
             </tr>
@@ -140,8 +140,8 @@
                 </td>
                 <td class="td-info clearfix">
                     <div class="info-hotel block-left">
+                        <h3>Villas at Poco Diablo</h3>
                         <div class="price-hotel">
-                            <h3>Villas at Poco Diablo</h3>
                             <span class="property-type">Апартаменты</span>
                             <span class="price">от 2000 Р.</span>
                         </div>
@@ -155,7 +155,7 @@
                             <i class="star">★</i>
                             <i class="star">★</i>
                         </div>
-                        <mark class="raiting">Рейтинг: 9,2</mark>
+                        <mark class="rating">Рейтинг: 9,2</mark>
                     </div>
                 </td>
             </tr>

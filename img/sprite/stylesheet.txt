@@ -1,0 +1,59 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-1-house {
+    width: 75px;
+    height: 72px;
+    background-position: -20px -20px;
+}
+
+.sprite-2-burger {
+    width: 74px;
+    height: 70px;
+    background-position: -20px -132px;
+}
+
+.sprite-3-box {
+    width: 64px;
+    height: 76px;
+    background-position: -20px -242px;
+}
+
+.sprite-btn-1-t {
+    width: 17px;
+    height: 15px;
+    background-position: -20px -358px;
+}
+
+.sprite-btn-2-f {
+    width: 10px;
+    height: 19px;
+    background-position: -20px -413px;
+}
+
+.sprite-btn-3-y {
+    width: 20px;
+    height: 16px;
+    background-position: -20px -472px;
+}
+
+.sprite-calendar {
+    width: 21px;
+    height: 22px;
+    background-position: -20px -528px;
+}
+
+.sprite-checkbox-off {
+    width: 22px;
+    height: 22px;
+    background-position: -20px -590px;
+}
+
+.sprite-checkbox-on {
+    width: 26px;
+    height: 22px;
+    background-position: -20px -652px;
+}

@@ -32,9 +32,14 @@ img {
     height: auto;
 }
 
+button {
+    font-family: inherit;
+}
+
 main {
     flex-grow: 1;
     background-color: #fff;
+    position: relative;
 }
 
 .block-left {
@@ -65,10 +70,58 @@ main {
     text-align: center;
 }
 
+.btn {
+    background-color: #81b3d2;
+    border: 0;
+    font-size: 21px;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #669ec0;
+}
+
+.btn:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-text:hover {
+    color: #81b3d2;
+}
+
+.btn-text:active {
+    opacity: 0.3;
+    color: #000;
+}
+
+.brown-btn:hover {
+    background-color: #604e43;
+}
+
+.brown-btn:active {
+    background-color: #503e33;
+}
+
+.transparent-btn {
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+}
+
+.transparent-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.active {
+    color: #766357;
+}
+
 /*header*/
 
 .main-header{
-        background-color: #fff;
+    background-color: #fff;
 }
 
 .main-navigation {
@@ -95,8 +148,18 @@ main {
 .main-navigation a {
     text-align: center;
     text-decoration: none;
-    line-height: 56px;
+    line-height: 4;
     font-weight: bold;
+    color: #000;
+}
+
+.main-navigation a:hover {
+    color: #81b3d2;
+}
+
+.main-navigation a:active {
+    color: #000;
+    opacity: 0.3;
 }
 
 .main-logo {
@@ -104,23 +167,47 @@ main {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    z-index: 10;
   }
 
 /*index*/
 
 .promo {
     min-height: 512px;
+    background:
+        url("../img/background-index-2.png") no-repeat center bottom,
+        url("../img/background-index.jpg") no-repeat center 20%;
+    background-size: contain, auto;
+    position: relative;
+    padding-top: 75px;
+}
+
+.promo-logo {
+    display: block;
+    width: 458px;
+    height: 352px;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: -3000px;
+    overflow: hidden;
+    background: url("../img/index-logo.png") no-repeat;
 }
 
 .slogan {
     text-align: center;
     width: 470px;
     margin: 60px auto 30px;
+    color: #000;
 }
 
 .slogan-features {
     text-align: center;
     margin-bottom: 50px;
+}
+
+.slogan-features span {
+    color: #333;
+    line-height: 1.857;
 }
 
 .feature {
@@ -154,11 +241,43 @@ main {
     margin-bottom: 20px;
 }
 
-.attractions li {
-    min-height: 330px;
-    padding-top: 150px;
-    padding-bottom: 65px;
+.number-feature:before,
+.number-feature:after {
+    content: "—";
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
 }
+
+.attractions li {
+    min-height: 300px;
+    padding-top: 160px;
+    padding-bottom: 65px;
+    position: relative;
+}
+
+.attractions div {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url("../img/sprite.png") no-repeat;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%, 0);
+}
+
+.attractions .house {
+    background-position: -19px -20px;
+}
+.attractions .food {
+    background-position: -19px -132px;
+}
+.attractions .souvenirs {
+    background-position: -14px -242px;
+}
+
 
 .attractions h3 {
     margin-top: 0;
@@ -192,6 +311,9 @@ main {
 
 .features-3-5 h3 {
     margin: 0;
+    line-height: 1;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .features-3-5 p{
@@ -200,6 +322,19 @@ main {
 
 .index-form {
     width: 570px;
+}
+
+.map {
+    position: absolute;
+    bottom: -131px;
+    left: 0;
+    z-index: -1;
+}
+
+.index-form h2 {
+    font-size: 30px;
+    line-height: 1.25;
+    color: #000;
 }
 
 .index-form .slogan-form {
@@ -235,7 +370,8 @@ main {
 .card-form {
     min-height: 390px;
     padding: 55px;
-    margin-bottom: 80px;
+    margin-bottom: 57px;
+    position: relative;
 }
 
 .form-people {
@@ -256,19 +392,68 @@ main {
 
 .form-date input{
     width: 345px;
+    font-weight: bold;
+    color: #000;
 }
 
 .form-date label{
     padding-top: 10px;
-    width: calc(100%-345px;)
+    width: calc(100%-345px);
+    font-weight: bold;
+    color: #000;
+}
+
+.icon-calendar {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url("../img/sprite.png") no-repeat;
+    background-position: -10px -518px;
+    left: 420px;
 }
 
 .card-form input {
     height: 40px;
+    border: none;
+    background-color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    padding-left: 15px;
+}
+
+.input {
+    font-size: 0;
+}
+
+.input label {
+    margin-right: 43px;
+    color: #000;
+}
+
+.input label {
+    font-weight: bold;
+    color: #000;
 }
 
 .card-form input[type="number"] {
     width: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon-minus,
+.icon-plus {
+    font-style: normal;
+    background-color: #f2f2f2;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    font-size: 22px;
+    line-height: 1;
+    color: #a9a9a9;
+    line-height: 40px;
+    border: 2px solid #f2f2f2;
 }
 
 .card-form button {
@@ -276,6 +461,30 @@ main {
     height: 60px;
     padding: 0;
     margin: 0;
+}
+
+.card-form input:hover,
+.card-form .icon-minus:hover,
+.card-form .icon-plus:hover {
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+}
+
+.card-form input:active,
+.card-form .icon-minus:active,
+.card-form .icon-plus:active {
+    background-color: #fff;
+    border-color: #e5e5e5;
+}
+
+.card-form .icon-minus:hover,
+.card-form .icon-plus:hover {
+    color: #000;
+}
+
+.card-form .icon-minus:active,
+.card-form .icon-plus:active {
+    color: #81b3d2;
 }
 
 /*hotels*/
@@ -289,6 +498,13 @@ main {
     padding-top: 25px;
     padding-bottom: 30px;
     max-height: 217px;
+    background: url("../img/background-filter.jpg") no-repeat center top;
+    background-size: cover;
+    color: #fff;
+}
+
+.hotels-form legend {
+    font-weight: bold;
 }
 
 .hotels-form fieldset {
@@ -327,9 +543,22 @@ main {
     padding-bottom: 30px;
 }
 
+.result-sorting button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
 .sorting {
     padding: 0;
+    padding-top: 4px;
     font-size: 0;
+}
+
+.result-forms {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 1.238;
+    color: #000;
 }
 
 .sorting li {
@@ -358,6 +587,23 @@ main {
     margin-right: 0;
 }
 
+.result-sorting .sort-property {
+    border-bottom: 1px dotted #81b3d2;
+    color: #000;
+    opacity: 0.3;
+}
+
+.result-sorting .sort-property:hover {
+    color: #81b3d2;
+    opacity: 1;
+}
+
+.result-sorting .sort-property:active {
+    border: none;
+    color: #000;
+    opacity: 1;
+}
+
 .sort-ascending {
     margin-right: 12px;
 }
@@ -365,6 +611,23 @@ main {
 .search-results {
     width: 100%;
     border-collapse: collapse;
+}
+
+.sort-ascending,
+.sort-descending {
+    opacity: 0.3;
+    color: #000;
+}
+
+.sort-ascending:hover,
+.sort-descending:hover {
+    opacity: 1;
+}
+
+.sort-ascending:active,
+.sort-descending:active {
+    opacity: 1;
+    color: #81b3d2;
 }
 
 .search-results tr {
@@ -387,9 +650,18 @@ main {
     vertical-align: top;
 }
 
-.td-info h3 {
+.td-info .name-hotel {
+    display: inline-block;
     margin: 0;
     margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    font-size: 21px;
+}
+
+.td-info .name-hotel:hover {
+    color: #81b3d2;
 }
 
 .price-hotel {
@@ -399,11 +671,25 @@ main {
 
 .property-type {
     display: inline-block;
-    width: 120px;
+    width: 118px;
 }
 
 .info-btn {
     margin-right: 7px;
+}
+
+.info-btn,
+.order-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 14px;
+    line-height: 1.929;
+    height: 27px;
+}
+.order-btn {
+    background-color: #766357;
 }
 
 .stars {
@@ -415,10 +701,16 @@ main {
 .star {
     font-style: normal;
     color: #81b3d2;
+    font-size: 23px;
+    line-height: 23px;
 }
 
 .rating {
     display: block;
+    background-color: #f2f2f2;
+    padding-left: 17px;
+    padding-right: 17px;
+    line-height: 27px;
 }
 
 /*footer*/
@@ -434,6 +726,13 @@ main {
     margin-top: 50px;
     margin-bottom: 50px;
     min-height: 25px;
+    font-size: 21px;
+}
+
+.footer-hashtag a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .footer-social {
@@ -441,6 +740,34 @@ main {
     margin-bottom: 36px;
     margin-left: 110px;
     min-height: 48px;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 46px;
+    height: 48px;
+    background:
+        url("../img/sprite.png") no-repeat,
+        #81b3d2;
+    opacity: 0, 1;
+    text-indent: -3000px;
+    overflow: hidden;
+}
+
+.social-btn:active {
+    background:
+}
+
+.social-btn-tw {
+    background-position: -5px -343px;;
+}
+
+.social-btn-fb {
+    background-position: 0 -400px;
+}
+
+.social-btn-yt {
+    background-position: -6px -456px;
 }
 
 .footer-copyright {
@@ -453,6 +780,20 @@ main {
     margin: 0;
 }
 
-.footer-copyright img{
-    vertical-align: middle;
+.copyright-logo:hover .text {
+  fill: #81b3d2;
+}
+
+.copyright-logo:hover .frame,
+.copyright-logo:hover .top-hat {
+  stroke: #81b3d2;
+}
+
+.copyright-logo:active .text {
+  fill: #bdbbbc;
+}
+
+.copyright-logo:active .frame,
+.copyright-logo:active .top-hat {
+  stroke: #bdbbbc;
 }

@@ -25,6 +25,7 @@ h3 {
     font-size: 21px;
     line-height: 1.2;
     color: #000;
+    font-weight: 700;
 }
 
 img {
@@ -153,7 +154,7 @@ white-space: pre;
     text-align: center;
     text-decoration: none;
     line-height: 4;
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
     outline: none;
 }
@@ -179,7 +180,7 @@ white-space: pre;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10;
-  }
+}
 
 .main-logo img:active{
     opacity: 0.3;
@@ -217,6 +218,7 @@ white-space: pre;
     width: 470px;
     margin: 60px auto 30px;
     color: #000;
+    font-weight: 700;
 }
 
 .slogan-features {
@@ -227,6 +229,7 @@ white-space: pre;
 .slogan-features span {
     color: #333;
     line-height: 1.857;
+    font-weight: 400;
 }
 
 .feature {
@@ -241,13 +244,14 @@ white-space: pre;
 
  .number-feature {
     display: block;
- }
+}
 
 .feature .info-feature {
     width: 256px;
     text-align: center;;
     padding: 43px 30px 38px;
     color: #fff;
+    font-weight: 400;
 }
 
 .info-feature h3 {
@@ -256,11 +260,13 @@ white-space: pre;
     padding-left: 22.5px;
     padding-right: 22.5px;
     line-height: 1;
+    font-weight: 700;
 }
 
 .number-feature {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .number-feature:before,
@@ -307,6 +313,7 @@ white-space: pre;
 
 .attractions p {
     margin: 0;
+    font-weight: 400;
 }
 
 .column-grid {
@@ -322,6 +329,8 @@ white-space: pre;
     vertical-align: top;
     padding-left: 46px;
     padding-right: 46px;
+    font-weight: 400;
+
 }
 
 .features-3-5 {
@@ -340,6 +349,7 @@ white-space: pre;
 
 .features-3-5 p{
     margin: 0;
+    font-weight: 400;
 }
 
 .index-form {
@@ -363,12 +373,14 @@ white-space: pre;
 .index-form .slogan-form {
     margin-top: 50px;
     margin-bottom: 25px;
+    font-weight: 700;
 }
 
 .index-form .tip-form {
     width: 450px;
     display: inline-block;
     vertical-align: middle;
+    font-weight: 400;
 }
 
 .bottom-wrap {
@@ -394,6 +406,7 @@ white-space: pre;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-weight: 700;
 }
 
 .card-form {
@@ -426,7 +439,7 @@ white-space: pre;
 
 .form-date input{
     width: 345px;
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
     text-transform: uppercase;
 }
@@ -434,7 +447,7 @@ white-space: pre;
 .form-date label{
     padding-top: 10px;
     width: calc(100% - 345px);
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
     text-align: left;
 }
@@ -473,7 +486,7 @@ white-space: pre;
 .input label {
     margin-right: 43px;
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .input .children-form {
@@ -484,7 +497,7 @@ white-space: pre;
 .card-form input[type="number"] {
     width: 40px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     margin-left: auto;
     margin-right: auto;
 }
@@ -520,6 +533,7 @@ input[type='number'] {
     padding: 0;
     margin: 0;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .card-form input:hover,
@@ -563,7 +577,7 @@ input[type='number'] {
 }
 
 .hotels-form legend {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .hotels-form fieldset {
@@ -581,7 +595,6 @@ input[type='number'] {
     display: inline-block;
     margin-left: 40px;
     font-weight: 400;
-
 }
 
 .input-hotels-form {
@@ -615,24 +628,29 @@ input[type='number'] {
     background-position: -20px -652px;
 }
 
+.input-hotels-form + label[disabled]::before {
+    background-position: -30px -927px;
+}
+
+.input-hotels-form:checked + label[disabled]::before {
+    background-position: -27px -978px;
+}
+
 .filter-range {
   width: 224px;
-
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .filter-range-title {
   margin-bottom: 12px;
-
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 21px;
 }
 
 .price-controls {
   position: relative;
-
   height: 36px;
   margin-bottom: 20px;
   font-size: 0;
@@ -645,10 +663,8 @@ input[type='number'] {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 2px;
   height: 22px;
-
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
@@ -674,40 +690,33 @@ input[type='number'] {
 .price-controls input {
   width: 30px;
   margin: 0;
-
   color: inherit;
   font: inherit;
-
   background: none;
   border: none;
 }
 
 .range-controls {
   position: relative;
-
   margin-bottom: 32px;
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
   width: 70%;
   height: 2px;
-
   background: #ffffff;
 }
 
 .range-toggle {
   position: absolute;
   top: -9px;
-
   width: 20px;
   height: 20px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -731,12 +740,10 @@ input[type='number'] {
   display: block;
   margin: 0 auto;
   padding: 6px 35px;
-
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
-
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -746,7 +753,6 @@ input[type='number'] {
 
 .btn-transparent:hover {
   color: #000000;
-
   background: #ffffff;
 }
 
@@ -833,6 +839,7 @@ input[type='number'] {
 .search-results {
     width: 100%;
     border-collapse: collapse;
+    font-weight: 400;
 }
 
 .sort-ascending,
@@ -878,7 +885,7 @@ input[type='number'] {
     margin: 0;
     margin-top: 17px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
     font-size: 21px;
 }
@@ -900,6 +907,7 @@ input[type='number'] {
 .property-type {
     display: inline-block;
     width: 118px;
+    font-weight: 400;
 }
 
 .info-btn {
@@ -915,7 +923,9 @@ input[type='number'] {
     font-size: 14px;
     line-height: 1.929;
     height: 27px;
+    font-weight: 700;
 }
+
 .order-btn {
     background-color: #766357;
 }
@@ -939,6 +949,7 @@ input[type='number'] {
     padding-left: 17px;
     padding-right: 17px;
     line-height: 27px;
+    font-weight: 400;
 }
 
 /*footer*/
@@ -958,7 +969,7 @@ input[type='number'] {
 
 .footer-hashtag a {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     outline: none;
 }
@@ -1023,6 +1034,7 @@ input[type='number'] {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
+    font-weight: 400;
 }
 
 .copyright-logo {

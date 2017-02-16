@@ -69,3 +69,15 @@
 	width: 21px;
 	height: 22px;
 }
+
+.checkbox-disabled-off{
+	background-position: -30px -927px ;
+	width: 22px;
+	height: 22px;
+}
+
+.checkbox-disabled-on{
+	background-position: -27px -978px ;
+	width: 26px;
+	height: 22px;
+}

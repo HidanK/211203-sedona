@@ -3,16 +3,26 @@
 }
 
 body {
+    /*Блочная модель*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    /*Типография*/
     font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #333;
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+    /*Оформление*/
     background-color: #f2f2f2;
 }
 
@@ -38,9 +48,11 @@ button {
 }
 
 main {
-    flex-grow: 1;
-    background-color: #fff;
     position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    background-color: #fff;
 }
 
 .block-left {
@@ -63,8 +75,8 @@ main {
 
 .clearfix::after {
     content: "";
-    clear: both;
     display: table;
+    clear: both;
 }
 
 .text-center {
@@ -119,8 +131,8 @@ main {
 }
 
 .line-break::before {
-content:"\a";
-white-space: pre;
+    content:"\a";
+    white-space: pre;
 }
 
 /*header*/
@@ -178,7 +190,8 @@ white-space: pre;
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     z-index: 10;
 }
 
@@ -193,24 +206,29 @@ white-space: pre;
 /*index*/
 
 .promo {
+    position: relative;
     min-height: 512px;
+    padding-top: 75px;
     background:
         url("../img/background-index-2.png") no-repeat center bottom,
         url("../img/background-index.jpg") no-repeat center 20%;
     background-size: contain, auto;
-    position: relative;
-    padding-top: 75px;
 }
 
 .promo-logo {
+    /*Блочная модель*/
     display: block;
     width: 458px;
     height: 352px;
     margin-left: auto;
     margin-right: auto;
+
+    /*Оформление*/
+    background: url("../img/index-logo.png") no-repeat;
+
+    /*Разное*/
     text-indent: -3000px;
     overflow: hidden;
-    background: url("../img/index-logo.png") no-repeat;
 }
 
 .slogan {
@@ -242,7 +260,7 @@ white-space: pre;
     width: 512px;
 }
 
- .number-feature {
+.number-feature {
     display: block;
 }
 
@@ -264,7 +282,7 @@ white-space: pre;
 }
 
 .number-feature {
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
     font-weight: 400;
 }
@@ -278,22 +296,27 @@ white-space: pre;
 }
 
 .attractions li {
+    position: relative;
     min-height: 300px;
     padding-top: 160px;
     padding-bottom: 60px;
-    position: relative;
 }
 
 .attractions div {
-    content: "";
-    display: block;
+    /*Позиционирование*/
     position: absolute;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    left: 50%;
+    top: 55px;
+
+    /*Блочная модель*/
+    display: block;
     width: 80px;
     height: 80px;
+
+    /*Оформление*/
     background: url("../img/sprite.png") no-repeat;
-    left: 50%;
-    top: 50px;
-    transform: translate(-50%, 0);
 }
 
 .attractions .house {
@@ -323,13 +346,16 @@ white-space: pre;
 }
 
 .column-grid li {
+    /*Блочная мрдель*/
     display: inline-block;
     width: 256px;
-    font-size: 14px;
-    vertical-align: top;
     padding-left: 46px;
     padding-right: 46px;
+
+    /*Типография*/
+    font-size: 14px;
     font-weight: 400;
+    vertical-align: top;
 
 }
 
@@ -371,7 +397,7 @@ white-space: pre;
 }
 
 .index-form .slogan-form {
-    margin-top: 50px;
+    margin-top: 55px;
     margin-bottom: 25px;
     font-weight: 700;
 }
@@ -384,9 +410,9 @@ white-space: pre;
 }
 
 .bottom-wrap {
-  position: relative;
-  min-height: 475px;
-  text-align: center;
+    position: relative;
+    min-height: 475px;
+    text-align: center;
 }
 
 .card {
@@ -394,35 +420,47 @@ white-space: pre;
 }
 
 .card a {
-    color: #fff;
+    /*Блочная модель*/
     display: block;
+    min-height: 85px;
+    max-width: 100%;
+
+    /*Типография*/
+    font-size: 21px;
+    color: #fff;
+    line-height: 85px;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
+
+    /*оформление*/
     background-color: #766357;
-    min-height: 85px;
-    line-height: 85px;
-    font-size: 21px;
-    max-width: 100%;
+
+    /*разное*/
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-weight: 700;
 }
 
 .card-form {
-    min-height: 390px;
-    padding: 55px;
-    margin-bottom: 80px;
+    /*Позиционировании*/
     position: relative;
-    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+    /*Блочная модель*/
     width: 570px;
+    min-height: 390px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 80px;
+    padding: 55px;
+
+    /*Оформление*/
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
     background-color: #fff;
 }
 
 .form-people {
-    margin-bottom: 55px;
+    margin-bottom: 45px;
 }
 
 .card-form label,
@@ -433,32 +471,40 @@ white-space: pre;
 }
 
 .form-date {
-    margin-bottom: 30px;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .form-date input{
     width: 345px;
-    font-weight: 700;
     color: #000;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .form-date label{
-    padding-top: 10px;
+    /*Блочная модель*/
     width: calc(100% - 345px);
+    padding-top: 10px;
+
+    /*Типография*/
     font-weight: 700;
     color: #000;
     text-align: left;
 }
 
 .icon-calendar {
+    /*Позицианирование*/
     position: absolute;
+    left: 420px;
+
+    /*блочная модель*/
     width: 40px;
     height: 40px;
+
+    /*Оформление*/
     background: url("../img/sprite.png") no-repeat;
     background-position: -10px -518px;
-    left: 420px;
     outline: none;
 }
 
@@ -471,11 +517,13 @@ white-space: pre;
 }
 
 .card-form input {
+    /*Блочная модель*/
     height: 40px;
-    border: none;
+    padding-left: 10px;
+
+    /*Оформление*/
     background-color: #f2f2f2;
     border: 2px solid #f2f2f2;
-    padding-left: 15px;
     outline: none;
 }
 
@@ -496,10 +544,10 @@ white-space: pre;
 
 .card-form input[type="number"] {
     width: 40px;
-    font-size: 14px;
-    font-weight: 700;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -514,15 +562,20 @@ input[type='number'] {
 
 .icon-minus,
 .icon-plus {
-    font-style: normal;
-    background-color: #f2f2f2;
+    /*Блочная модель*/
     display: inline-block;
     width: 40px;
     height: 40px;
-    vertical-align: middle;
+
+    /*Типография*/
+    font-style: normal;
     font-size: 22px;
-    color: #a9a9a9;
     line-height: 40px;
+    vertical-align: middle;
+    color: #a9a9a9;
+
+    /*Оформление*/
+    background-color: #f2f2f2;
     border: 2px solid #f2f2f2;
     outline: none;
 }
@@ -568,9 +621,9 @@ input[type='number'] {
 }
 
 .hotels-form {
+    max-height: 217px;
     padding-top: 25px;
     padding-bottom: 30px;
-    max-height: 217px;
     background: url("../img/background-filter.jpg") no-repeat center top;
     background-size: cover;
     color: #fff;
@@ -602,8 +655,8 @@ input[type='number'] {
 }
 
 .form-hotels-checkbox .checkbox-wrap {
-    margin-bottom: 25px;
     position: relative;
+    margin-bottom: 25px;
 }
 
 .form-hotels-checkbox legend {
@@ -613,13 +666,18 @@ input[type='number'] {
 }
 
 .input-hotels-form + label::before {
-    content: "";
-    display: block;
+    /*Позиционирование*/
     position: absolute;
-    width: 26px;
-    height: 22px;
     left: 0;
     bottom: 0;
+
+    /*Блочная модель*/
+    content: "";
+    display: block;
+    width: 26px;
+    height: 22px;
+
+    /*Оформление*/
     background: url("../img/sprite.png") no-repeat;
     background-position: -20px -590px;
 }
@@ -637,50 +695,58 @@ input[type='number'] {
 }
 
 .filter-range {
-  width: 224px;
-  color: #ffffff;
-  text-transform: uppercase;
+    width: 224px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .filter-range-title {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 .price-controls {
-  position: relative;
-  height: 36px;
-  margin-bottom: 20px;
-  font-size: 0;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
+    /*Позиционирование*/
+    position: relative;
+
+    /*Блочьная модель*/
+    height: 36px;
+    margin-bottom: 20px;
+
+    /*Типография*/
+    font-size: 0;
+
+    /*Оформление*/
+    border: 2px solid #ffffff;
+    border-radius: 2px;
 }
 
 .price-controls::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2px;
-  height: 22px;
-  background: #ffffff;
-  transform: translate(-50%, -50%);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .price-controls label {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 30px;
-  vertical-align: top;
-  cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 30px;
+    vertical-align: top;
+    cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 105px;
-  text-align: center;
+    width: 105px;
+    text-align: center;
 }
 
 .price-controls .min-price {
@@ -688,72 +754,77 @@ input[type='number'] {
 }
 
 .price-controls input {
-  width: 30px;
-  margin: 0;
-  color: inherit;
-  font: inherit;
-  background: none;
-  border: none;
+    width: 30px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
 }
 
 .range-controls {
-  position: relative;
-  margin-bottom: 32px;
+    position: relative;
+    margin-bottom: 32px;
 }
 
 .range-controls .scale {
-  height: 2px;
-  background: rgba(255, 255, 255, 0.3);
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
-  width: 70%;
-  height: 2px;
-  background: #ffffff;
+    width: 70%;
+    height: 2px;
+    background: #ffffff;
 }
 
 .range-toggle {
-  position: absolute;
-  top: -9px;
-  width: 20px;
-  height: 20px;
-  background: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  cursor: pointer;
+    position: absolute;
+    top: -9px;
+    width: 20px;
+    height: 20px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+    background: #1c4f80;
 }
 
 .range-toggle-min {
-  left: 0;
+    left: 0;
 }
 
 .range-toggle-max {
-  left: 70%;
+    left: 70%;
 }
 
 .btn-transparent {
-  display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #ffffff;
-  text-transform: uppercase;
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  cursor: pointer;
-  outline: none;
+    /*Блочьная модель*/
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+    border: 2px solid #ffffff;
+
+    /*Типография*/
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    /*Оформление*/
+    background: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
 }
 
 .btn-transparent:hover {
-  color: #000000;
-  background: #ffffff;
+    color: #000000;
+    background: #ffffff;
 }
 
 .result-sorting {
@@ -881,13 +952,16 @@ input[type='number'] {
 }
 
 .td-info .name-hotel {
+    /*Блочьная модель*/
     display: inline-block;
     margin: 0;
     margin-top: 17px;
+
+    /*Типография*/
+    font-size: 21px;
     text-decoration: none;
     font-weight: 700;
     color: #000;
-    font-size: 21px;
 }
 
 .td-info .name-hotel:hover {
@@ -916,14 +990,17 @@ input[type='number'] {
 
 .info-btn,
 .order-btn {
+    /*Блочная модель*/
     display: inline-block;
-    text-decoration: none;
+    height: 27px;
     padding-left: 17px;
     padding-right: 17px;
+
+    /*Типография*/
     font-size: 14px;
     line-height: 1.929;
-    height: 27px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .order-btn {
@@ -945,11 +1022,11 @@ input[type='number'] {
 
 .rating {
     display: block;
-    background-color: #f2f2f2;
     padding-left: 17px;
     padding-right: 17px;
     line-height: 27px;
     font-weight: 400;
+    background-color: #f2f2f2;
 }
 
 /*footer*/
@@ -975,17 +1052,18 @@ input[type='number'] {
 }
 
 .footer-social {
+    min-height: 48px;
     margin-top: 36px;
     margin-left: 110px;
-    min-height: 48px;
 }
 
 .social-btn {
+    position: relative;
     display: inline-block;
     width: 46px;
     height: 48px;
+    margin-right: 4px;
     background-color: #81b3d2;
-    position: relative;
     text-indent: -3000px;
     overflow: hidden;
 }
@@ -995,11 +1073,15 @@ input[type='number'] {
 }
 
 .social-icon {
-    background: url("../img/sprite.png") no-repeat;
+    /*Позиционирование*/
     position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+
+    /*Оформление*/
+    background: url("../img/sprite.png") no-repeat;
 }
 
 .social-icon-tw {
@@ -1009,15 +1091,15 @@ input[type='number'] {
 }
 
 .social-icon-fb {
+    background-position: -20px -413px;
     width: 10px;
     height: 19px;
-    background-position: -20px -413px;
 }
 
 .social-icon-yt {
+    background-position: -20px -472px;
     width: 20px;
     height: 16px;
-    background-position: -20px -472px;
 }
 
 .footer-copyright {
@@ -1030,33 +1112,33 @@ input[type='number'] {
 }
 
 .footer-copyright span {
-    font-size: 14px;
     display: inline-block;
+    font-size: 14px;
     vertical-align: middle;
     margin-right: 10px;
     font-weight: 400;
 }
 
 .copyright-logo {
-    outline: none;
     display: inline-block;
     vertical-align: middle;
+    outline: none;
 }
 
 .copyright-logo:hover .text {
-  fill: #81b3d2;
+    fill: #81b3d2;
 }
 
 .copyright-logo:hover .frame,
 .copyright-logo:hover .top-hat {
-  stroke: #81b3d2;
+    stroke: #81b3d2;
 }
 
 .copyright-logo:active .text {
-  fill: #bdbbbc;
+    fill: #bdbbbc;
 }
 
 .copyright-logo:active .frame,
 .copyright-logo:active .top-hat {
-  stroke: #bdbbbc;
+    stroke: #bdbbbc;
 }

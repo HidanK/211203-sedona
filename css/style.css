@@ -1069,7 +1069,9 @@ input[type='number'] {
 .footer-hashtag {
     margin-top: 40px;
     min-height: 25px;
+    padding-left: 60px;
     font-size: 21px;
+    text-align: left;
 }
 
 .footer-hashtag a {

@@ -1,18 +1,30 @@
+@charset "UTF-8";
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
+    /*Блочная модель*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    /*Типография*/
     font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #333;
     text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+    /*Оформление*/
     background-color: #f2f2f2;
 }
 
@@ -25,6 +37,7 @@ h3 {
     font-size: 21px;
     line-height: 1.2;
     color: #000;
+    font-weight: 700;
 }
 
 img {
@@ -37,9 +50,11 @@ button {
 }
 
 main {
-    flex-grow: 1;
-    background-color: #fff;
     position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    background-color: #fff;
 }
 
 .block-left {
@@ -62,8 +77,8 @@ main {
 
 .clearfix::after {
     content: "";
-    clear: both;
     display: table;
+    clear: both;
 }
 
 .text-center {
@@ -118,8 +133,8 @@ main {
 }
 
 .line-break::before {
-content:"\a";
-white-space: pre;
+    content:"\a";
+    white-space: pre;
 }
 
 /*header*/
@@ -153,9 +168,10 @@ white-space: pre;
     text-align: center;
     text-decoration: none;
     line-height: 4;
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
     outline: none;
+    font-family: inherit;
 }
 
 .main-navigation a:hover {
@@ -164,6 +180,7 @@ white-space: pre;
 
 .main-navigation a:active {
     color: #000;
+    opacity: 0.3;
 }
 
 .main-navigation .active,
@@ -177,9 +194,10 @@ white-space: pre;
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     z-index: 10;
-  }
+}
 
 .main-logo img:active{
     opacity: 0.3;
@@ -192,24 +210,29 @@ white-space: pre;
 /*index*/
 
 .promo {
+    position: relative;
     min-height: 512px;
+    padding-top: 75px;
     background:
         url("../img/background-index-2.png") no-repeat center bottom,
         url("../img/background-index.jpg") no-repeat center 20%;
     background-size: contain, auto;
-    position: relative;
-    padding-top: 75px;
 }
 
 .promo-logo {
+    /*Блочная модель*/
     display: block;
     width: 458px;
     height: 352px;
     margin-left: auto;
     margin-right: auto;
+
+    /*Оформление*/
+    background: url("../img/index-logo.png") no-repeat;
+
+    /*Разное*/
     text-indent: -3000px;
     overflow: hidden;
-    background: url("../img/index-logo.png") no-repeat;
 }
 
 .slogan {
@@ -217,6 +240,7 @@ white-space: pre;
     width: 470px;
     margin: 60px auto 30px;
     color: #000;
+    font-weight: 700;
 }
 
 .slogan-features {
@@ -227,6 +251,7 @@ white-space: pre;
 .slogan-features span {
     color: #333;
     line-height: 1.857;
+    font-weight: 400;
 }
 
 .feature {
@@ -239,15 +264,16 @@ white-space: pre;
     width: 512px;
 }
 
- .number-feature {
+.number-feature {
     display: block;
- }
+}
 
 .feature .info-feature {
     width: 256px;
     text-align: center;;
     padding: 43px 30px 38px;
     color: #fff;
+    font-weight: 400;
 }
 
 .info-feature h3 {
@@ -256,11 +282,13 @@ white-space: pre;
     padding-left: 22.5px;
     padding-right: 22.5px;
     line-height: 1;
+    font-weight: 700;
 }
 
 .number-feature {
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .number-feature:before,
@@ -272,22 +300,27 @@ white-space: pre;
 }
 
 .attractions li {
+    position: relative;
     min-height: 300px;
     padding-top: 160px;
     padding-bottom: 60px;
-    position: relative;
 }
 
 .attractions div {
-    content: "";
-    display: block;
+    /*Позиционирование*/
     position: absolute;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    left: 50%;
+    top: 55px;
+
+    /*Блочная модель*/
+    display: block;
     width: 80px;
     height: 80px;
+
+    /*Оформление*/
     background: url("../img/sprite.png") no-repeat;
-    left: 50%;
-    top: 50px;
-    transform: translate(-50%, 0);
 }
 
 .attractions .house {
@@ -307,6 +340,7 @@ white-space: pre;
 
 .attractions p {
     margin: 0;
+    font-weight: 400;
 }
 
 .column-grid {
@@ -316,12 +350,17 @@ white-space: pre;
 }
 
 .column-grid li {
+    /*Блочная мрдель*/
     display: inline-block;
     width: 256px;
-    font-size: 14px;
-    vertical-align: top;
     padding-left: 46px;
     padding-right: 46px;
+
+    /*Типография*/
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: top;
+
 }
 
 .features-3-5 {
@@ -340,6 +379,7 @@ white-space: pre;
 
 .features-3-5 p{
     margin: 0;
+    font-weight: 400;
 }
 
 .index-form {
@@ -361,20 +401,22 @@ white-space: pre;
 }
 
 .index-form .slogan-form {
-    margin-top: 50px;
+    margin-top: 55px;
     margin-bottom: 25px;
+    font-weight: 700;
 }
 
 .index-form .tip-form {
     width: 450px;
     display: inline-block;
     vertical-align: middle;
+    font-weight: 400;
 }
 
 .bottom-wrap {
-  position: relative;
-  min-height: 475px;
-  text-align: center;
+    position: relative;
+    min-height: 475px;
+    text-align: center;
 }
 
 .card {
@@ -382,33 +424,47 @@ white-space: pre;
 }
 
 .card a {
-    color: #fff;
+    /*Блочная модель*/
     display: block;
+    min-height: 85px;
+    max-width: 100%;
+
+    /*Типография*/
+    font-size: 21px;
+    color: #fff;
+    line-height: 85px;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
+
+    /*оформление*/
     background-color: #766357;
-    min-height: 85px;
-    line-height: 85px;
-    font-size: 21px;
-    max-width: 100%;
+
+    /*разное*/
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .card-form {
-    min-height: 390px;
-    padding: 55px;
-    margin-bottom: 80px;
+    /*Позиционировании*/
     position: relative;
-    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+    /*Блочная модель*/
     width: 570px;
+    min-height: 390px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 80px;
+    padding: 55px;
+
+    /*Оформление*/
+    box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
     background-color: #fff;
 }
 
 .form-people {
+    margin-top: 30px;
     margin-bottom: 55px;
 }
 
@@ -420,32 +476,45 @@ white-space: pre;
 }
 
 .form-date {
-    margin-bottom: 30px;
     position: relative;
+    margin-top: 30px;
+}
+
+.form-date:first-child {
+    margin-top: 0;
 }
 
 .form-date input{
     width: 345px;
-    font-weight: bold;
     color: #000;
     text-transform: uppercase;
+    font-weight: 700;
+    font-family: inherit;
 }
 
 .form-date label{
-    padding-top: 10px;
+    /*Блочная модель*/
     width: calc(100% - 345px);
-    font-weight: bold;
+    padding-top: 10px;
+
+    /*Типография*/
+    font-weight: 700;
     color: #000;
     text-align: left;
 }
 
 .icon-calendar {
+    /*Позицианирование*/
     position: absolute;
+    left: 420px;
+
+    /*блочная модель*/
     width: 40px;
     height: 40px;
+
+    /*Оформление*/
     background: url("../img/sprite.png") no-repeat;
     background-position: -10px -518px;
-    left: 420px;
     outline: none;
 }
 
@@ -458,11 +527,13 @@ white-space: pre;
 }
 
 .card-form input {
-    height: 40px;
-    border: none;
+    /*Блочная модель*/
+    height: 38px;
+    padding-left: 10px;
+
+    /*Оформление*/
     background-color: #f2f2f2;
     border: 2px solid #f2f2f2;
-    padding-left: 15px;
     outline: none;
 }
 
@@ -473,20 +544,21 @@ white-space: pre;
 .input label {
     margin-right: 43px;
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .input .children-form {
-    margin-right: 20px;
-    margin-left: 47px;
+    margin-right: 30px;
 }
 
 .card-form input[type="number"] {
-    width: 40px;
-    font-size: 14px;
-    font-weight: bold;
+    width: 38px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -501,17 +573,24 @@ input[type='number'] {
 
 .icon-minus,
 .icon-plus {
-    font-style: normal;
-    background-color: #f2f2f2;
+    /*Блочная модель*/
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    font-size: 22px;
-    color: #a9a9a9;
-    line-height: 40px;
+    width: 38px;
+    height: 38px;
     border: 2px solid #f2f2f2;
+
+    /*Типография*/
+    font-style: normal;
+    font-size: 22px;
+    line-height: 36px;
+    vertical-align: middle;
+    color: #a9a9a9;
+    font-weight: 700;
+
+    /*Оформление*/
+    background-color: #f2f2f2;
     outline: none;
+    cursor: pointer
 }
 
 .card-form button {
@@ -520,6 +599,7 @@ input[type='number'] {
     padding: 0;
     margin: 0;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .card-form input:hover,
@@ -554,16 +634,16 @@ input[type='number'] {
 }
 
 .hotels-form {
+    max-height: 217px;
     padding-top: 25px;
     padding-bottom: 30px;
-    max-height: 217px;
     background: url("../img/background-filter.jpg") no-repeat center top;
     background-size: cover;
     color: #fff;
 }
 
 .hotels-form legend {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .hotels-form fieldset {
@@ -581,7 +661,6 @@ input[type='number'] {
     display: inline-block;
     margin-left: 40px;
     font-weight: 400;
-
 }
 
 .input-hotels-form {
@@ -589,8 +668,8 @@ input[type='number'] {
 }
 
 .form-hotels-checkbox .checkbox-wrap {
-    margin-bottom: 25px;
     position: relative;
+    margin-bottom: 25px;
 }
 
 .form-hotels-checkbox legend {
@@ -600,13 +679,18 @@ input[type='number'] {
 }
 
 .input-hotels-form + label::before {
-    content: "";
-    display: block;
+    /*Позиционирование*/
     position: absolute;
-    width: 26px;
-    height: 22px;
     left: 0;
     bottom: 0;
+
+    /*Блочная модель*/
+    content: "";
+    display: block;
+    width: 26px;
+    height: 22px;
+
+    /*Оформление*/
     background: url("../img/sprite.png") no-repeat;
     background-position: -20px -590px;
 }
@@ -615,56 +699,74 @@ input[type='number'] {
     background-position: -20px -652px;
 }
 
-.filter-range {
-  width: 224px;
+.input-hotels-form[disabled] + label::before {
+    background-position: -30px -927px;
+}
 
-  color: #ffffff;
-  text-transform: uppercase;
+.input-hotels-form[disabled]:checked + label::before {
+    background-position: -27px -978px;
+
+}
+
+.input-hotels-form[disabled]:checked + label,
+.input-hotels-form[disabled] + label {
+    color: #6a6a6a;
+}
+
+.filter-range {
+    width: 224px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .filter-range-title {
-  margin-bottom: 12px;
-
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 .price-controls {
-  position: relative;
+    /*Позиционирование*/
+    position: relative;
 
-  height: 36px;
-  margin-bottom: 20px;
-  font-size: 0;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
+    /*Блочьная модель*/
+    height: 36px;
+    margin-bottom: 20px;
+
+    /*Типография*/
+    font-size: 0;
+
+    /*Оформление*/
+    border: 2px solid #ffffff;
+    border-radius: 2px;
 }
 
 .price-controls::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 2px;
-  height: 22px;
-
-  background: #ffffff;
-  transform: translate(-50%, -50%);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .price-controls label {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 30px;
-  vertical-align: top;
-  cursor: pointer;
+    display: inline-block;
+    padding-top: 3px;
+    font-size: 14px;
+    line-height: 27px;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 105px;
-  text-align: center;
+    width: 105px;
+    text-align: center;
 }
 
 .price-controls .min-price {
@@ -672,82 +774,77 @@ input[type='number'] {
 }
 
 .price-controls input {
-  width: 30px;
-  margin: 0;
-
-  color: inherit;
-  font: inherit;
-
-  background: none;
-  border: none;
+    width: 40px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
 }
 
 .range-controls {
-  position: relative;
-
-  margin-bottom: 32px;
+    position: relative;
+    margin-bottom: 32px;
 }
 
 .range-controls .scale {
-  height: 2px;
-
-  background: rgba(255, 255, 255, 0.3);
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
-  width: 70%;
-  height: 2px;
-
-  background: #ffffff;
+    width: 70%;
+    height: 2px;
+    background: #ffffff;
 }
 
 .range-toggle {
-  position: absolute;
-  top: -9px;
-
-  width: 20px;
-  height: 20px;
-
-  background: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  cursor: pointer;
+    position: absolute;
+    top: -9px;
+    width: 20px;
+    height: 20px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+    background: #1c4f80;
 }
 
 .range-toggle-min {
-  left: 0;
+    left: 0;
 }
 
 .range-toggle-max {
-  left: 70%;
+    left: 70%;
 }
 
 .btn-transparent {
-  display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
+    /*Блочьная модель*/
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+    border: 2px solid #ffffff;
 
-  font-size: 14px;
-  line-height: 20px;
-  color: #ffffff;
-  text-transform: uppercase;
+    /*Типография*/
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
 
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  cursor: pointer;
-  outline: none;
+    /*Оформление*/
+    background: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
 }
 
 .btn-transparent:hover {
-  color: #000000;
-
-  background: #ffffff;
+    color: #000000;
+    background: #ffffff;
 }
 
 .result-sorting {
@@ -762,7 +859,7 @@ input[type='number'] {
 
 .sorting {
     padding: 0;
-    padding-top: 4px;
+    padding-top: 6px;
     font-size: 0;
 }
 
@@ -791,7 +888,7 @@ input[type='number'] {
 .button-sorting {
     padding: 0;
     text-transform: uppercase;
-    margin-right: 35px;
+    margin-right: 30px;
     font-weight: 400;
 }
 
@@ -801,8 +898,7 @@ input[type='number'] {
 
 .result-sorting .sort-property {
     border-bottom: 1px dotted #81b3d2;
-    color: #000;
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
     outline: none;
 }
 
@@ -827,12 +923,14 @@ input[type='number'] {
 }
 
 .sort-ascending {
-    margin-right: 12px;
+    margin-right: 7px;
 }
 
 .search-results {
     width: 100%;
     border-collapse: collapse;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 .sort-ascending,
@@ -840,6 +938,7 @@ input[type='number'] {
     opacity: 0.3;
     color: #000;
     outline: none;
+    font-size: 14px;
 }
 
 .sort-ascending:hover,
@@ -859,7 +958,8 @@ input[type='number'] {
 }
 
 .search-results td {
-    height: 150px;
+    height: 151px;
+    padding-top: 10px;
 }
 
 .td-image {
@@ -874,13 +974,16 @@ input[type='number'] {
 }
 
 .td-info .name-hotel {
+    /*Блочьная модель*/
     display: inline-block;
     margin: 0;
-    margin-top: 17px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #000;
+    margin-top: 13px;
+
+    /*Типография*/
     font-size: 21px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
 }
 
 .td-info .name-hotel:hover {
@@ -893,35 +996,41 @@ input[type='number'] {
 }
 
 .price-hotel {
-    margin-top: 10px;
-    margin-bottom: 9px;
+    margin-top: 5px;
+    margin-bottom: 13px;
 }
 
 .property-type {
     display: inline-block;
-    width: 118px;
+    width: 112px;
+    font-weight: 400;
 }
 
 .info-btn {
-    margin-right: 7px;
+    margin-right: 2px;
 }
 
 .info-btn,
 .order-btn {
+    /*Блочная модель*/
     display: inline-block;
-    text-decoration: none;
+    height: 27px;
     padding-left: 17px;
     padding-right: 17px;
+
+    /*Типография*/
     font-size: 14px;
     line-height: 1.929;
-    height: 27px;
+    font-weight: 700;
+    text-decoration: none;
 }
+
 .order-btn {
     background-color: #766357;
 }
 
 .stars {
-    margin-top: 21px;
+    margin-top: 15px;
     margin-bottom: 41px;
     text-align: right;
 }
@@ -935,46 +1044,56 @@ input[type='number'] {
 
 .rating {
     display: block;
-    background-color: #f2f2f2;
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 13px;
+    padding-right: 13px;
     line-height: 27px;
+    font-weight: 400;
+    color: #666666;
+    background-color: #f2f2f2;
 }
 
 /*footer*/
 
 .main-footer {
     min-height: 120px;
-    padding-left: 60px;
-    padding-right: 30px;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+.footer-hashtag,
+.footer-social,
+.footer-copyright {
+    display: inline-block;
+    width: 33.33%
+}
+
 .footer-hashtag {
-    margin-top: 50px;
+    margin-top: 40px;
     min-height: 25px;
+    padding-left: 60px;
     font-size: 21px;
+    text-align: left;
 }
 
 .footer-hashtag a {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     outline: none;
 }
 
 .footer-social {
-    margin-top: 36px;
-    margin-left: 110px;
     min-height: 48px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .social-btn {
+    position: relative;
     display: inline-block;
     width: 46px;
     height: 48px;
+    margin-right: 4px;
     background-color: #81b3d2;
-    position: relative;
     text-indent: -3000px;
     overflow: hidden;
 }
@@ -984,11 +1103,15 @@ input[type='number'] {
 }
 
 .social-icon {
-    background: url("../img/sprite.png") no-repeat;
+    /*Позиционирование*/
     position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+
+    /*Оформление*/
+    background: url("../img/sprite.png") no-repeat;
 }
 
 .social-icon-tw {
@@ -998,20 +1121,22 @@ input[type='number'] {
 }
 
 .social-icon-fb {
+    background-position: -20px -413px;
     width: 10px;
     height: 19px;
-    background-position: -20px -413px;
 }
 
 .social-icon-yt {
+    background-position: -20px -472px;
     width: 20px;
     height: 16px;
-    background-position: -20px -472px;
 }
 
 .footer-copyright {
-    margin-top: 40px;
+    margin-top: 35px;
     min-height: 39px;
+    padding-right: 30px;
+    text-align: right;
 }
 
 .footer-copyright p {
@@ -1019,32 +1144,33 @@ input[type='number'] {
 }
 
 .footer-copyright span {
-    font-size: 14px;
     display: inline-block;
+    font-size: 14px;
     vertical-align: middle;
     margin-right: 10px;
+    font-weight: 400;
 }
 
 .copyright-logo {
-    outline: none;
     display: inline-block;
     vertical-align: middle;
+    outline: none;
 }
 
 .copyright-logo:hover .text {
-  fill: #81b3d2;
+    fill: #81b3d2;
 }
 
 .copyright-logo:hover .frame,
 .copyright-logo:hover .top-hat {
-  stroke: #81b3d2;
+    stroke: #81b3d2;
 }
 
 .copyright-logo:active .text {
-  fill: #bdbbbc;
+    fill: #bdbbbc;
 }
 
 .copyright-logo:active .frame,
 .copyright-logo:active .top-hat {
-  stroke: #bdbbbc;
+    stroke: #bdbbbc;
 }

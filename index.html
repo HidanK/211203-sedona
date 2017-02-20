@@ -24,7 +24,7 @@
 
     <main class="container">
         <section class="promo text-center">
-            <span class="promo-logo">Welcome To the gorgeous Sedona. Because the Grand Canyoun Sucks</span>
+            <img src="img/index-logo.png" class="promo-logo" alt=">Welcome To the gorgeous Sedona. Because the Grand Canyoun Sucks" width="458" height="352">
         </section>
         <h2 class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего</h2>
         <section class="features">
@@ -41,18 +41,15 @@
             </figure>
 
             <ul class="attractions column-grid">
-                <li>
-                    <div class="house"></div>
+                <li class="house">
                     <h3>Жилье</h3>
                     <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
-                <li>
-                    <div class="food"></div>
+                <li class="food">
                     <h3>Еда</h3>
                     <p>Всегда заказывайте фирменный бургер, <span class="line-break">вы не разочаруетесь!</span></p>
                 </li>
-                <li>
-                    <div class="souvenirs"></div>
+                <li class="souvenirs">
                     <h3>Сувениры</h3>
                     <p>Не только китайского, но и местного производства!</p>
                 </li>
@@ -107,30 +104,30 @@
         <img class="map" src="img/map.jpg" alt="Карта" width="768" height="593">
         <form class="card-form" action="?" method="get" name="index-form">
             <div class="form-date clearfix">
-                <label class="block-left">Дата заезда:</label>
-                <input type="text" name="arrival-date" value="24 апреля 2017" class="block-right">
-                <i class="icon-calendar" tabindex="0"></i>
+                <label class="block-left" for="arrival-date">Дата заезда:</label>
+                <input type="text" name="arrival-date" id="arrival-date" value="24 апреля 2017" class="block-right">
+                <button class="icon-calendar"></button>
             </div>
             <div class="form-date clearfix">
-                <label class="block-left">Дата выезда:</label>
-                <input type="text" name="date-departure" value="4 июля 2017" class="block-right">
-                <i class="icon-calendar" tabindex="0"></i>
+                <label class="block-left" for="date-departure">Дата выезда:</label>
+                <input type="text" name="date-departure" id="date-departure" value="4 июля 2017" class="block-right">
+                <button class="icon-calendar"></button>
             </div>
             <div class="form-people clearfix">
                 <div class="input block-left">
                     <label class="adults-form" for="adult">Взрослые:</label>
-                    <i class="icon-minus" tabindex="0">–</i>
+                    <button class="icon-minus">–</button>
                     <input type="number" id="adult" name="adult" min="1" value="2">
-                    <i class="icon-plus" tabindex="0">+</i>
+                    <button class="icon-plus">+</button>
                 </div>
                 <div class="input block-right">
                     <label class="children-form" for="child">Дети:</label>
-                    <i class="icon-minus" tabindex="0">–</i>
+                    <button class="icon-minus">–</button>
                     <input type="number" id="child" name="child" min="0" value="0">
-                    <i class="icon-plus" tabindex="0">+</i>
+                    <button class="icon-plus">+</button>
                 </div>
             </div>
-            <button type="submit" class="btn">Найти</button>
+            <button type="submit" class="btn btn-find-index">Найти</button>
         </form>
         <footer class="main-footer container clearfix">
             <div class="footer-hashtag block-left">
